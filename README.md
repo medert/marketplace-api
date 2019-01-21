@@ -8,7 +8,7 @@ Products \
 
 * * * * *
 
-![Resources]()
+![Resources](https://github.com/medert/marketplace-api/blob/master/doc/Resources.png)
 
 -----------------------------------------------------
 
