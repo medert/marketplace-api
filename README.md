@@ -9,17 +9,17 @@ Products \
 * * * * *
 
 
-<h3>[GET /products \]</h3>
+<h3>GET /products \</h3>
 <h5>List products</h5>
 
 -----------------------------------------------------
 
-<h3>[GET /products?instock \]</h3>
+<h3>GET /products?instock \</h3>
 <h5>List products with non-zero inventory\_count</h5>
 
 -----------------------------------------------------
 
-<h3>[GET /products?param=value \]</h3>
+<h3>GET /products?param=value \</h3>
 <h5>List products with specific tiltle </h5>
 <h5>List products with price </h5>
 <h5>List products with inventory\_count </h5>
@@ -79,7 +79,7 @@ GET /products
 
 
 
-<h3>[GET /products/:id \] </h3>
+<h3>GET /products/:id \ </h3>
  <h5>Show a product</h5>
 
  -----------------------------------------------------
@@ -111,7 +111,7 @@ GET /products/3
 
 
 
-<h3>[GET /products/:id/purchase \] </h3>
+<h3>GET /products/:id/purchase \ </h3>
 <h5>Purchase a product</h5>
 
 ### [Examples]((https://github.com/medert/marketplace-api/blob/master/doc/apipie_examples.json))
