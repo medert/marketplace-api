@@ -1,0 +1,293 @@
+{
+  "products#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/products",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "message": "Loaded all products in ascending order",
+        "data": [
+          {
+            "id": 1,
+            "title": "nemo",
+            "price": 48.43,
+            "inventory_count": 46,
+            "created_at": "2019-01-21T03:25:54.312Z",
+            "updated_at": "2019-01-21T03:25:54.312Z"
+          },
+          {
+            "id": 2,
+            "title": "est",
+            "price": 13.06,
+            "inventory_count": 15,
+            "created_at": "2019-01-21T03:25:54.314Z",
+            "updated_at": "2019-01-21T03:25:54.314Z"
+          },
+          {
+            "id": 3,
+            "title": "asperiores",
+            "price": 86.55,
+            "inventory_count": 60,
+            "created_at": "2019-01-21T03:25:54.316Z",
+            "updated_at": "2019-01-21T03:25:54.316Z"
+          }
+        ]
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/products",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "message": "Loaded all products in ascending order",
+        "data": [
+          {
+            "id": 4,
+            "title": "qui",
+            "price": 94.63,
+            "inventory_count": 15,
+            "created_at": "2019-01-21T03:25:54.326Z",
+            "updated_at": "2019-01-21T03:25:54.326Z"
+          },
+          {
+            "id": 5,
+            "title": "dolorem",
+            "price": 49.46,
+            "inventory_count": 38,
+            "created_at": "2019-01-21T03:25:54.328Z",
+            "updated_at": "2019-01-21T03:25:54.328Z"
+          },
+          {
+            "id": 6,
+            "title": "quaerat",
+            "price": 44.52,
+            "inventory_count": 27,
+            "created_at": "2019-01-21T03:25:54.329Z",
+            "updated_at": "2019-01-21T03:25:54.329Z"
+          }
+        ]
+      },
+      "code": 200,
+      "show_in_doc": 0,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/products",
+      "versions": [
+        "1.0"
+      ],
+      "query": "title=incidunt",
+      "request_data": null,
+      "response_data": {
+        "message": "Loaded all products with a title 'incidunt'",
+        "data": [
+          {
+            "id": 7,
+            "title": "incidunt",
+            "price": 51.75,
+            "inventory_count": 11,
+            "created_at": "2019-01-21T03:25:54.336Z",
+            "updated_at": "2019-01-21T03:25:54.336Z"
+          }
+        ]
+      },
+      "code": 200,
+      "show_in_doc": 0,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/products",
+      "versions": [
+        "1.0"
+      ],
+      "query": "title=adipisci",
+      "request_data": null,
+      "response_data": {
+        "message": "Loaded all products with a title 'adipisci'",
+        "data": [
+          {
+            "id": 10,
+            "title": "adipisci",
+            "price": 52.65,
+            "inventory_count": 34,
+            "created_at": "2019-01-21T03:25:54.349Z",
+            "updated_at": "2019-01-21T03:25:54.349Z"
+          }
+        ]
+      },
+      "code": 200,
+      "show_in_doc": 0,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/products",
+      "versions": [
+        "1.0"
+      ],
+      "query": "price=85.63",
+      "request_data": null,
+      "response_data": {
+        "message": "Loaded all products with a price of $85.63",
+        "data": [
+          {
+            "id": 13,
+            "title": "perspiciatis",
+            "price": 85.63,
+            "inventory_count": 29,
+            "created_at": "2019-01-21T03:25:54.361Z",
+            "updated_at": "2019-01-21T03:25:54.361Z"
+          }
+        ]
+      },
+      "code": 200,
+      "show_in_doc": 0,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/products",
+      "versions": [
+        "1.0"
+      ],
+      "query": "price=57.97",
+      "request_data": null,
+      "response_data": {
+        "message": "Loaded all products with a price of $57.97",
+        "data": [
+          {
+            "id": 16,
+            "title": "voluptatem",
+            "price": 57.97,
+            "inventory_count": 45,
+            "created_at": "2019-01-21T03:25:54.371Z",
+            "updated_at": "2019-01-21T03:25:54.371Z"
+          }
+        ]
+      },
+      "code": 200,
+      "show_in_doc": 0,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/products",
+      "versions": [
+        "1.0"
+      ],
+      "query": "instock",
+      "request_data": null,
+      "response_data": {
+        "message": "Loaded all products with a non-zero inventory level'",
+        "data": [
+          {
+            "id": 19,
+            "title": "fugiat",
+            "price": 31.95,
+            "inventory_count": 62,
+            "created_at": "2019-01-21T03:25:54.385Z",
+            "updated_at": "2019-01-21T03:25:54.385Z"
+          },
+          {
+            "id": 20,
+            "title": "laudantium",
+            "price": 93.78,
+            "inventory_count": 79,
+            "created_at": "2019-01-21T03:25:54.387Z",
+            "updated_at": "2019-01-21T03:25:54.387Z"
+          },
+          {
+            "id": 21,
+            "title": "rerum",
+            "price": 27.42,
+            "inventory_count": 47,
+            "created_at": "2019-01-21T03:25:54.390Z",
+            "updated_at": "2019-01-21T03:25:54.390Z"
+          }
+        ]
+      },
+      "code": 200,
+      "show_in_doc": 0,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/products",
+      "versions": [
+        "1.0"
+      ],
+      "query": "instock",
+      "request_data": null,
+      "response_data": {
+        "message": "Loaded all products with a non-zero inventory level'",
+        "data": [
+          {
+            "id": 22,
+            "title": "aperiam",
+            "price": 90.09,
+            "inventory_count": 82,
+            "created_at": "2019-01-21T03:25:54.404Z",
+            "updated_at": "2019-01-21T03:25:54.404Z"
+          },
+          {
+            "id": 23,
+            "title": "minima",
+            "price": 78.09,
+            "inventory_count": 94,
+            "created_at": "2019-01-21T03:25:54.407Z",
+            "updated_at": "2019-01-21T03:25:54.407Z"
+          },
+          {
+            "id": 24,
+            "title": "velit",
+            "price": 79.17,
+            "inventory_count": 23,
+            "created_at": "2019-01-21T03:25:54.409Z",
+            "updated_at": "2019-01-21T03:25:54.409Z"
+          }
+        ]
+      },
+      "code": 200,
+      "show_in_doc": 0,
+      "recorded": true
+    }
+  ],
+  "products#show": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/products/25",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "message": "Loaded a product with id 25",
+        "data": {
+          "id": 25,
+          "title": "sunt",
+          "price": 85.13,
+          "inventory_count": 89,
+          "created_at": "2019-01-21T03:25:54.416Z",
+          "updated_at": "2019-01-21T03:25:54.416Z"
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ]
+}

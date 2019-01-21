@@ -1,5 +1,13 @@
 class Api::V1::ProductsController < ApplicationController
-  
+
+  api :GET, '/products', 'List products'
+  api :GET, '/products?instock', 'List products with non-zero inventory_count'
+  api :GET, '/products?param=value', "List products with specific tiltle, price or inventory_count (example '/products?title=Desk')"
+  param :instock, String, allow_nil: true
+  param :title, String, allow_nil: false
+  param :price, String, allow_nil: false
+  param :inventory_count, String, allow_nil: false
+
   def index
     if params.key?("title")
       @products = Product.where(title: params[:title])
@@ -20,12 +28,18 @@ class Api::V1::ProductsController < ApplicationController
     json_response(msg,@products)
   end
 
+
+  api :GET, '/products/:id', 'Show a product'
+  param :id, :number, asc: 'id of the requested product'
+
   def show
     @product = Product.find(params[:id])
     # binding.pry
     msg = "Loaded a product with id #{params[:id]}"
     json_response(msg,@product)
   end
+
+  api :GET, '/products/:id/purchase', 'Purchase a product'
 
   def purchase
     @product = Product.find(params[:product_id])

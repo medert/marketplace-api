@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::ProductsController, type: :request do
-  let!(:products) { create_list(:product, 10) }
+  let!(:products) { create_list(:product, 3) }
   let(:product_id) { products.first.id }
   let(:title) { products.first.title }
   let(:price) { products.first.price }
@@ -12,7 +12,7 @@ RSpec.describe Api::V1::ProductsController, type: :request do
 
     it 'returns products' do
       expect(json).not_to be_empty
-      expect(json['data'].size).to eq(10)
+      expect(json['data'].size).to eq(3)
     end
 
     it 'return status code 200' do
