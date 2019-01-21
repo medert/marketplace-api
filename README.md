@@ -9,19 +9,24 @@ Products \
 * * * * *
 
 
-[GET /products](#description-index) \
- List products
--------------------------------------
+<h3>[GET /products \](#description-index)</h3>
+<h5>List products</h5>
 
-[GET /products?instock](#description-index) \
- List products with non-zero inventory\_count
----------------------------------------------
+-----------------------------------------------------
 
-[GET /products?param=value](#description-index) \
- List products with specific tiltle, price or inventory\_count (example '/products?title=Desk')
------------------------------------------------------------------------------------------------
+<h3>[GET /products?instock \](#description-index)</h3>
+<h5>List products with non-zero inventory\_count</h5>
 
-### Examples
+-----------------------------------------------------
+
+<h3>[GET /products?param=value \](#description-index)</h3>
+<h5>List products with specific tiltle </h5>
+<h5>List products with price </h5>
+<h5>List products with inventory\_count </h5>
+
+-----------------------------------------------------
+
+### [Examples]((https://github.com/medert/marketplace-api/blob/master/doc/apipie_examples.json)
 
 ``` {.prettyprint}
 GET /products
@@ -74,11 +79,12 @@ GET /products
 
 
 
-[GET /products/:id](#description-show) \
- Show a product
-----------------------------------------
+<h3>[GET /products/:id \](#description-show) </h3>
+ <h5>Show a product</h5>
 
-### Examples
+ -----------------------------------------------------
+
+### [Examples]((https://github.com/medert/marketplace-api/blob/master/doc/apipie_examples.json)
 
 ``` {.prettyprint}
 GET /products/3
@@ -105,8 +111,9 @@ GET /products/3
 
 
 
-[GET /products/:id/purchase](#description-purchase) \
- Purchase a product
------------------------------------------------------
+<h3>[GET /products/:id/purchase \](#description-purchase) </h3>
+<h5>Purchase a product</h5>
+
+### [Examples]((https://github.com/medert/marketplace-api/blob/master/doc/apipie_examples.json)
 
 * * * * *
