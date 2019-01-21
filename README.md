@@ -1,204 +1,343 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+          <h4><a href='#products'>Products</a></h4>
+  <ul>
+      <li><a href='#products-index'>index</a></li>
+      <li><a href='#products-show'>show</a></li>
+      <li><a href='#products-purchase'>purchase</a></li>
+  </ul>
 
-Things you may want to cover:
 
-* Ruby version
-    ruby '2.5.3'
-* System dependencies
-    gem 'rails', '~> 5.2.2'
-    gem 'rspec-rails'
-    gem 'pg', '>= 0.18', '< 2.0'
-    gem 'puma', '~> 3.11'
 
-* Configuration
+<div>
+<p>Another API description</p>
+</div>
 
-* Database creation
-    rake db:create
+<hr>
 
-* Database initialization
-    rake db:migrate
 
-* How to run the test suite
-    rspec
+  <ul class='breadcrumb'  id='products'>
+    <li><a href='#'>MarketplaceApi</a><span class='divider'>/</span></li>
+    <li class='active'>Products</li>
+  </ul>
 
-  
-* ...
-# marketplace-api
+  <div class='page-header'>
+    <h1>
+      <a href='#products'>Products</a><br>
+      <small></small>
+    </h1>
+  </div>
 
--   [Market 1.0](../apidoc.html) /
--   Products
 
-Products \
-==========
+  <div class='accordion' id='accordion'>
 
-* * * * *
+      <hr>
 
-[\>\>\>](../apidoc/products/index.html)
+      <ul class='breadcrumb' id='products-index'>
+        <li>
+          <a href='#'>MarketplaceApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#products'>Products</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>index</li>
+      </ul>
 
-[GET /products](#description-index) \
- List products
--------------------------------------
+      <div>
+          <h3>
+            <a href='#products-index'>
+              GET /products
+            </a><br>
+            <small>List products</small>
+          </h3>
+          <h3>
+            <a href='#products-index'>
+              GET /products?instock
+            </a><br>
+            <small>List products with non-zero inventory_count</small>
+          </h3>
+          <h3>
+            <a href='#products-index'>
+              GET /products?param=value
+            </a><br>
+            <small>List products with specific tiltle, price or inventory_count (example '/products?title=Desk')</small>
+          </h3>
+      </div>
 
-[GET /products?instock](#description-index) \
- List products with non-zero inventory\_count
----------------------------------------------
+      <div>
 
-[GET /products?param=value](#description-index) \
- List products with specific tiltle, price or inventory\_count (example '/products?title=Desk')
------------------------------------------------------------------------------------------------
-
-### Examples
-
-``` {.prettyprint}
-GET /products
+          <h2>Examples</h2>
+            <pre>GET /api/v1/products
 200
 {
-  "message": "Loaded all products in ascending order",
-  "data": [
+  &quot;message&quot;: &quot;Loaded all products in ascending order&quot;,
+  &quot;data&quot;: [
     {
-      "id": 1,
-      "title": "a",
-      "price": 58.41,
-      "inventory_count": 59,
-      "created_at": "2019-01-20T03:58:22.689Z",
-      "updated_at": "2019-01-20T03:58:22.689Z"
+      &quot;id&quot;: 1,
+      &quot;title&quot;: &quot;nemo&quot;,
+      &quot;price&quot;: 48.43,
+      &quot;inventory_count&quot;: 46,
+      &quot;created_at&quot;: &quot;2019-01-21T03:25:54.312Z&quot;,
+      &quot;updated_at&quot;: &quot;2019-01-21T03:25:54.312Z&quot;
     },
     {
-      "id": 2,
-      "title": "omnis",
-      "price": 85.79,
-      "inventory_count": 85,
-      "created_at": "2019-01-20T03:58:22.692Z",
-      "updated_at": "2019-01-20T03:58:22.692Z"
+      &quot;id&quot;: 2,
+      &quot;title&quot;: &quot;est&quot;,
+      &quot;price&quot;: 13.06,
+      &quot;inventory_count&quot;: 15,
+      &quot;created_at&quot;: &quot;2019-01-21T03:25:54.314Z&quot;,
+      &quot;updated_at&quot;: &quot;2019-01-21T03:25:54.314Z&quot;
     },
     {
-      "id": 3,
-      "title": "sunt",
-      "price": 45.42,
-      "inventory_count": 12,
-      "created_at": "2019-01-20T03:58:22.694Z",
-      "updated_at": "2019-01-20T03:58:22.694Z"
-    },
-    {
-      "id": 4,
-      "title": "non",
-      "price": 80.97,
-      "inventory_count": 23,
-      "created_at": "2019-01-20T03:58:22.696Z",
-      "updated_at": "2019-01-20T03:58:22.696Z"
-    },
-    {
-      "id": 5,
-      "title": "laboriosam",
-      "price": 37.15,
-      "inventory_count": 88,
-      "created_at": "2019-01-20T03:58:22.698Z",
-      "updated_at": "2019-01-20T03:58:22.698Z"
-    },
-    {
-      "id": 6,
-      "title": "facere",
-      "price": 92.99,
-      "inventory_count": 40,
-      "created_at": "2019-01-20T03:58:22.700Z",
-      "updated_at": "2019-01-20T03:58:22.700Z"
-    },
-    {
-      "id": 7,
-      "title": "dignissimos",
-      "price": 25.75,
-      "inventory_count": 58,
-      "created_at": "2019-01-20T03:58:22.702Z",
-      "updated_at": "2019-01-20T03:58:22.702Z"
-    },
-    {
-      "id": 8,
-      "title": "voluptatem",
-      "price": 68.02,
-      "inventory_count": 39,
-      "created_at": "2019-01-20T03:58:22.704Z",
-      "updated_at": "2019-01-20T03:58:22.704Z"
-    },
-    {
-      "id": 9,
-      "title": "iure",
-      "price": 33.13,
-      "inventory_count": 57,
-      "created_at": "2019-01-20T03:58:22.706Z",
-      "updated_at": "2019-01-20T03:58:22.706Z"
-    },
-    {
-      "id": 10,
-      "title": "ipsum",
-      "price": 90.61,
-      "inventory_count": 74,
-      "created_at": "2019-01-20T03:58:22.708Z",
-      "updated_at": "2019-01-20T03:58:22.708Z"
+      &quot;id&quot;: 3,
+      &quot;title&quot;: &quot;asperiores&quot;,
+      &quot;price&quot;: 86.55,
+      &quot;inventory_count&quot;: 60,
+      &quot;created_at&quot;: &quot;2019-01-21T03:25:54.316Z&quot;,
+      &quot;updated_at&quot;: &quot;2019-01-21T03:25:54.316Z&quot;
     }
   ]
-}
-```
+}</pre>
 
-### Params
 
-+--------------------------------------+--------------------------------------+
-| Param name                           | Description                          |
-+======================================+======================================+
-| **instock**\                         | **Validations:**                     |
-|  optional , nil allowed              |                                      |
-|                                      | -   Must be a String                 |
-+--------------------------------------+--------------------------------------+
-| **title**\                           | **Validations:**                     |
-|  optional                            |                                      |
-|                                      | -   Must be a String                 |
-+--------------------------------------+--------------------------------------+
-| **price**\                           | **Validations:**                     |
-|  optional                            |                                      |
-|                                      | -   Must be a String                 |
-+--------------------------------------+--------------------------------------+
-| **inventory\_count**\                | **Validations:**                     |
-|  optional                            |                                      |
-|                                      | -   Must be a String                 |
-+--------------------------------------+--------------------------------------+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>instock </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
 
-* * * * *
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
 
-[\>\>\>](../apidoc/products/show.html)
+    </td>
 
-[GET /products/:id](#description-show) \
- Show a product
-----------------------------------------
+  </tr>
 
-### Examples
 
-``` {.prettyprint}
-GET /products/81
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>title </strong><br>
+      <small>
+        optional
+
+      </small>
+    </td>
+    <td>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>price </strong><br>
+      <small>
+        optional
+
+      </small>
+    </td>
+    <td>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>inventory_count </strong><br>
+      <small>
+        optional
+
+      </small>
+    </td>
+    <td>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='products-show'>
+        <li>
+          <a href='#'>MarketplaceApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#products'>Products</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>show</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#products-show'>
+              GET /products/:id
+            </a><br>
+            <small>Show a product</small>
+          </h3>
+      </div>
+
+      <div>
+
+          <h2>Examples</h2>
+            <pre>GET /api/v1/products/25
 200
 {
-  "message": "Loaded a product with id 81",
-  "data": null
-}
-```
+  &quot;message&quot;: &quot;Loaded a product with id 25&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: 25,
+    &quot;title&quot;: &quot;sunt&quot;,
+    &quot;price&quot;: 85.13,
+    &quot;inventory_count&quot;: 89,
+    &quot;created_at&quot;: &quot;2019-01-21T03:25:54.416Z&quot;,
+    &quot;updated_at&quot;: &quot;2019-01-21T03:25:54.416Z&quot;
+  }
+}</pre>
 
-### Params
 
-+--------------------------------------+--------------------------------------+
-| Param name                           | Description                          |
-+======================================+======================================+
-| **id**\                              | **Validations:**                     |
-|  optional                            |                                      |
-|                                      | -   Must be a number.                |
-+--------------------------------------+--------------------------------------+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        optional
 
-* * * * *
+      </small>
+    </td>
+    <td>
 
-[\>\>\>](../apidoc/products/purchase.html)
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a number.</p>
+</li>
+        </ul>
 
-[GET /products/:id/purchase](#description-purchase) \
- Purchase a product
------------------------------------------------------
+    </td>
 
-* * * * *
+  </tr>
+
+
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='products-purchase'>
+        <li>
+          <a href='#'>MarketplaceApi</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#products'>Products</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>purchase</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#products-purchase'>
+              GET /products/:id/purchase
+            </a><br>
+            <small>Purchase a product</small>
+          </h3>
+      </div>
+
+      <div>
+
+
+
+      </div>
+  </div>
+
+
+
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='./apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
