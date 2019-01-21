@@ -1,0 +1,203 @@
+  <h4><a href='#products'>Products</a></h4>
+  <ul>
+      <li><a href='#products-index'>index</a></li>
+      <li><a href='#products-show'>show</a></li>
+      <li><a href='#products-purchase'>purchase</a></li>
+  </ul>
+
+
+
+  <hr/>
+
+  <div>
+    <h2 id="products">
+      <a href='#products'>Products</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="products-index">
+      <a href='#products'>Products</a> / <a href='#products-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /products
+            <br>
+            <small>List products</small>
+          </h4>
+          <h4>
+              GET /products?instock
+            <br>
+            <small>List products with non-zero inventory_count</small>
+          </h4>
+          <h4>
+              GET /products?param=value
+            <br>
+            <small>List products with specific tiltle, price or inventory_count (example '/products?title=Desk')</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">GET /api/v1/products
+200
+{
+  &quot;message&quot;: &quot;Loaded all products in ascending order&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;title&quot;: &quot;nemo&quot;,
+      &quot;price&quot;: 48.43,
+      &quot;inventory_count&quot;: 46,
+      &quot;created_at&quot;: &quot;2019-01-21T03:25:54.312Z&quot;,
+      &quot;updated_at&quot;: &quot;2019-01-21T03:25:54.312Z&quot;
+    },
+    {
+      &quot;id&quot;: 2,
+      &quot;title&quot;: &quot;est&quot;,
+      &quot;price&quot;: 13.06,
+      &quot;inventory_count&quot;: 15,
+      &quot;created_at&quot;: &quot;2019-01-21T03:25:54.314Z&quot;,
+      &quot;updated_at&quot;: &quot;2019-01-21T03:25:54.314Z&quot;
+    },
+    {
+      &quot;id&quot;: 3,
+      &quot;title&quot;: &quot;asperiores&quot;,
+      &quot;price&quot;: 86.55,
+      &quot;inventory_count&quot;: 60,
+      &quot;created_at&quot;: &quot;2019-01-21T03:25:54.316Z&quot;,
+      &quot;updated_at&quot;: &quot;2019-01-21T03:25:54.316Z&quot;
+    }
+  ]
+}</pre>
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>instock </strong>:
+      <small>
+        optional
+        , nil allowed
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>title </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>price </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>inventory_count </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="products-show">
+      <a href='#products'>Products</a> / <a href='#products-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /products/:id
+            <br>
+            <small>Show a product</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">GET /api/v1/products/25
+200
+{
+  &quot;message&quot;: &quot;Loaded a product with id 25&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: 25,
+    &quot;title&quot;: &quot;sunt&quot;,
+    &quot;price&quot;: 85.13,
+    &quot;inventory_count&quot;: 89,
+    &quot;created_at&quot;: &quot;2019-01-21T03:25:54.416Z&quot;,
+    &quot;updated_at&quot;: &quot;2019-01-21T03:25:54.416Z&quot;
+  }
+}</pre>
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a number.</p>
+ ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="products-purchase">
+      <a href='#products'>Products</a> / <a href='#products-purchase'>purchase</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /products/:id/purchase
+            <br>
+            <small>Purchase a product</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+  </div>
