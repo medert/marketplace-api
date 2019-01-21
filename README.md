@@ -8,6 +8,9 @@ Products \
 
 * * * * *
 
+![Resources]()
+
+-----------------------------------------------------
 
 <h3>GET /products \</h3>
 <h5>List products</h5>
